@@ -1,5 +1,8 @@
 <?
 
+// if the token is not set, go get it from last.fm first.
+// user needs to authorise RecommenTor in order to get recommended artists
+// http://www.last.fm/api/show/user.getRecommendedArtists
 if(!isset($_GET['token']){
 
         header("location: http://www.last.fm/api/auth/?api_key=YOUR_API_KEY");
@@ -7,15 +10,18 @@ if(!isset($_GET['token']){
 
 }
 
-// requires PHP lastfmapi
+// requires PHP Last.fm API from Matt Oakes
+// http://sourceforge.net/projects/phplastfmapi/
 require 'lastfmapi/lastfmapi.php';
 
+// enter your PHP API key and secret (Get yours here: http://www.last.fm/api/accounts)
 $vars = array(
         'apiKey' => 'YOUR_API_KEY',
         'secret' => 'YOUR_API_SECRET',
         'token' => $_GET['token']
 );
 
+// start new session
 $auth = new lastfmApiAuth('getsession', $vars);
 
 $vars = array(
@@ -68,6 +74,7 @@ $source[3]['link']      = "mp3";
 $source[3]['prefix']    = "http://www.mininova.org/search/?search=";
 $source[3]['postfix']   = "&cat=5";
 
+// get recommendations
 if($recommendations = $packageClass->getRecommendedArtists($vars)){
 
         echo "<table border=1>\n";

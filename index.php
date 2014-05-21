@@ -3,7 +3,7 @@
 // if the token is not set, go get it from last.fm first.
 // user needs to authorise RecommenTor in order to get recommended artists
 // http://www.last.fm/api/show/user.getRecommendedArtists
-if(!isset($_GET['token']){
+if(!isset($_GET['token'])){
 
         header("location: http://www.last.fm/api/auth/?api_key=YOUR_API_KEY");
         exit();

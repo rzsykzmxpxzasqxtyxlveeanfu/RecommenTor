@@ -1,4 +1,8 @@
 RecommenTor
 ===========
 
-Download torrents based on your Las.fm recommendations
+Find music torrents (mp3, flac) based on your Last.fm recommendations
+
+Requires:
+ - you have and use a last.fm account;
+ - PHP lastfmapi.

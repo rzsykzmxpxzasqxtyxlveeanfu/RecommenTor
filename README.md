@@ -5,7 +5,7 @@ Find music torrents (mp3, flac) based on your Last.fm recommendations
 
 Requires:
  - you have and use a last.fm account;
- - PHP Last.fm API (http://sourceforge.net/projects/phplastfmapi/) by Matt Oakes (http://oakes.ws/)
+ - PHP Last.fm API (https://github.com/matto1990/PHP-Last.fm-API) by Matt Oakes (http://oakes.ws/)
 
 Configuration
  - The Callback URL can be set to index.php (http://www.last.fm/api/accounts -> RecommenTor -> Authentication -> Callback URL)

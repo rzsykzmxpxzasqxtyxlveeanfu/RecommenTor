@@ -1,5 +1,12 @@
 <?
 
+if(!isset($_GET['token']){
+
+        header("location: http://www.last.fm/api/auth/?api_key=YOUR_API_KEY");
+        exit();
+
+}
+
 // requires PHP lastfmapi
 require 'lastfmapi/lastfmapi.php';
 
